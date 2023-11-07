@@ -1,0 +1,44 @@
+#pyramidBox {
+    margin-top: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    #headerText {
+        text-align: center;
+        width: 50vw;
+    }
+        #titulo {
+            color: blue;
+            font-weight: bold;
+        } 
+        #total {
+            color: rgb(255, 115, 0);
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    #pyramid {
+        height: 70vh;
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        font-weight: 600;
+    }
+        #pyramid > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10%;
+            width: 100%;
+        }
+        #pyramid > div > div {
+            background-color: #5A5A5A;
+            margin: 3px;
+            padding: 15px;
+            height: 15px;
+            width: 15px;
+            border-radius: 10px;
+        }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Correo y Contraseña</title>
+        <link rel="stylesheet" href="estilo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <div>
+        <section>
+            <h1>Correo & Contraseña</h1>
+            <form id="loginForm">
+                <div>
+                    <label for="correo">Ingrese correo electronico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <div>
+                    <label for="contrasena">Ingrese contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena" required>
+                </div>
+                <div>
+                    <input type="submit" value="Validar">
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        // aqui tomamos el evento del submit
+        const loginForm = document.getElementById('loginForm');
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir la recarga de la página
+
+            // Obtener los valores de los inputs
+            const correo = document.getElementById('correo').value;
+            const contrasena = document.getElementById('contrasena').value;
+
+            // imprimir en la consola los valores ingresados en el formulario
+            console.log('imprimendo el correo ingresado: ' + correo);
+            console.log('impriendo la contrasena ingresada: ' + contrasena);
+        });//fin
+    </script>
+
+</body>
+</html>
