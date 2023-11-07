@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Correo y Contraseña</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <div>
+        <section>
+            <h1>Generador de números aleatorios</h1>
+            <form id="loginForm">
+                <div>
+                    <label for="inicio">Ingrese número inicial:</label>
+                    <input type="number" id="inicio" placeholder="Ingrese valor inicial">
+                </div>
+                <div>
+                    <label for="final">Ingrese número final:</label>
+                    <input type="number" id="final" placeholder="Ingrese valor final">
+                </div>
+                <div>
+                    <input type="submit" id="Validar" value="Calcular">
+                </div>
+                <div id="resultado">
+                    <!-- Aquí se mostrará el resultado -->
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        function generarNumeroPseudoaleatorio(inicial, final) {
+            return Math.floor(Math.random() * (final - inicial + 1)) + inicial;
+        }
+
+        function decimalABinario(decimal) {
+            return decimal.toString(2);
+        }
+
+        const generateButton = document.getElementById('Validar');
+        const resultDiv = document.getElementById('resultado');
+
+        generateButton.addEventListener('click', (e) => {
+            e.preventDefault(); // Evita que el formulario se envíe
+
+            const inicial = parseInt(document.getElementById('inicio').value);
+            const final = parseInt(document.getElementById('final').value);
+
+            if (!isNaN(inicial) && !isNaN(final)) {
+                const numeroGenerado = generarNumeroPseudoaleatorio(inicial, final);
+                const numeroBinario = decimalABinario(numeroGenerado);
+
+                console.log(`El decimal es: ${numeroGenerado}, transformado a binario: ${numeroBinario}`);
+
+                // Muestra el resultado en el div de resultado
+                resultDiv.textContent = `El decimal es: ${numeroGenerado}, transformado a binario: ${numeroBinario}`;
+            } else {
+                alert('Por favor, ingrese valores numéricos válidos para el rango.');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;1000&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-weight: inherit;
+  font-size: inherit;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 10px;
+}
+
+body {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  
+}
+
+main {
+  
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 600px;
+  
+
+}
+
+h1 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+input {
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+  border: 2px solid aquamarine;
+  padding: 0.3rem;
+}
+
+button {
+  padding: 0.3rem 1rem;
+  background-color: aquamarine;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+}
+
+button, input {
+  font-size: 20px;
+  font-weight: 50px;
+}
+
+#query {
+  width: 100%;
+}
+
+.card {
+  box-shadow: 0 0 10px rgba(196, 0, 0, 0.2);
+  padding: 1rem;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Response CSS */
+#response {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  margin: 2px 5px;
+  border: 2px solid #ccc;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Agregado para posicionamiento */
+}
+
+/* Estilos para el icono "x" */
+.delete-icon {
+  position: absolute; /* Posición absoluta con respecto al cuadro */
+  top: -13px;
+  right: -4px;
+  display: none; /* Ocultar el icono por defecto */
+  color: red; /* Cambiar el color del icono*/
+  cursor: pointer;
+  background-color: rgb(0, 247, 255);
+  padding: 2px 2px;
+  border-radius: 10px 2px;
+  
+
+}
+
+.square:hover .delete-icon {
+  display: block; /* Mostrar el icono en el hover del cuadro */
+  transition: 0.25s ease, transform 0.25s ease;
+  
+  
+}
+
+/* Estilos para el efecto de borde */
+.square:hover::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px solid #0000ff;
+  border-radius: 3px;
+  -webkit-transition: all 0.35s;
+  transition: all 0.25s ease;
+ 
+}
+
+.square:hover:hover::before {
+  all: 1;
+  transition: all 0.25s ease;
+}
