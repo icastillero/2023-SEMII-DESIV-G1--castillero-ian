@@ -1,0 +1,9 @@
+Instructions
+Objetivos:
+Implementar solución web usando las tecnologías de HTML y CSS.
+Enmaquetar diseño web usando HTML y CSS.
+Concatenar resultado diferentes proyectos web.
+Instrucciones
+Enmaquetar el siguiente diseño usando flex. 
+La entrega debe ser concatenada a lo implementado durante el parcial #2. 
+Puede modificar el texto.

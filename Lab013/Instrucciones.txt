@@ -1,0 +1,29 @@
+Laboratorio #13 - 
+Frontend para consumir información desde SparkJava:
+
+Instructions
+Objetivos:
+Implementar endpoints usando SparkJava para la lectura y escritura de datos
+Consumir endpoints usando VanillaJS
+Instrucciones
+Crear los siguientes endpoints usando SparkJava:
+Leer listado de notas (GET /notas/)
+
+Ejemplo de respuesta: 
+{ data: [{ id: 0, value: 100}, { id: 1, value: 99 }, { id: 2, value: 100 }], average: 99 }
+Crear nota (POST /notas/)
+Ejemplo de payload de request
+100
+Ejemplo de respuesta:
+[data: [{ id: 0, value: 100}, { id: 1, value: 99 }, { id: 2, value: 100 }], average: 99]
+Leer una (1) nota (GET /notas/:id)
+Ejemplo de respuesta
+{ id: 0, value: 100 }
+Luego, escribir un HTML que:
+Muestre las notas almacenadas.
+Permita agregar más notas.
+Permita leer una nota en un HTML diferente (o modal).
+
+Entrega individual
+Seguir parámetros de laboratorios anteriores para el .gitignore.
+
