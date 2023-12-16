@@ -1,0 +1,94 @@
+.parte1{
+    display: flex;
+    justify-content: center;
+}
+
+
+.cuadro{
+color: aliceblue;
+background-color: rgb(13, 13, 97);
+margin-top: 50px;
+margin-bottom: 50px;
+border: 2px solid black;
+padding: 30px;
+border-radius: 10px;
+width: 250px; /* Ancho fijo */
+height: 150px; /* Altura fija */
+}
+
+
+.cuadrop{
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Agrega alineación vertical al centro */
+    /*height: 100vh; /* Establece la altura al 100% de la altura de la ventana */
+}
+
+
+
+
+.piramide {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columnas */
+    align-items: center; /* Centra horizontalmente los elementos */
+    margin-left: 20px;
+}
+
+
+[class^="fila"] {
+    display: flex;
+    justify-content: center;
+}
+
+.caja {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(242, 248, 254);
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(10, 1, 1);
+    border: 2px solid #00090f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px 10px 5px;
+    border-radius: 5px;
+
+}
+
+
+
+#boton{
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#boton2{
+    margin-top: 140px;
+    margin-left: 50px;
+    
+}
+
+#entrada{
+    width: 250px;
+    height: 25px;
+    border-radius: 10px ;
+}
+
+.sumatoria{
+    width: 80px; /* Ajusta el ancho según tus preferencias */
+    height: 40px; /* Ajusta la altura según tus preferencias */
+    background-color:rgb(13, 13, 97); /* Cambia el color de fondo según tus preferencias */
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.caja.selected {
+    background-color: coral; /* Cambia el color a tu elección */
+    color: white; /* Cambia el color del texto si es necesario */
+}
